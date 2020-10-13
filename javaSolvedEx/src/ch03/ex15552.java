@@ -1,5 +1,5 @@
 package ch03;
 
 public class ex15552 {
-	//bf Ãß°¡¿ä¸Á
+	//bf í•œêµ­ë§ ë‹¤ì‹œ ì¨ë³´ê¸° utf-8
 }
