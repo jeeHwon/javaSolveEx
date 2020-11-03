@@ -1,8 +1,8 @@
-package ch07;
+package ch08;
 
 import java.util.Scanner;
 
-public class ex11720 {
+public class ex1172 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = Integer.parseInt(sc.nextLine());
