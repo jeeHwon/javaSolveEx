@@ -1,26 +1,34 @@
 package ch08;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.DecimalFormat;
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class ex10250 {
 
-	public static void main(String[] args) {
-		//h w  n
-		//6 12 10 : 402
-		//30 50 72 : 1203
-		Scanner sc = new Scanner(System.in);
-		int test = sc.nextInt();
+	public static void main(String[] args) throws IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int test = Integer.parseInt(bf.readLine());
+		String[] result = new String[test];
 		for (int i = 0; i < test; i++) {
-			int h = sc.nextInt();
-			int w = sc.nextInt();
-			int n = sc.nextInt();
+			String s = bf.readLine(); 
+			StringTokenizer st = new StringTokenizer(s); 
+			int h = Integer.parseInt(st.nextToken());
+			int w = Integer.parseInt(st.nextToken());
+			int n = Integer.parseInt(st.nextToken());
 			
-			int mok = n/h;
-			int cha = n-(mok*h);
+			int ho = (int)Math.ceil(n*1.0/h*1.0);
+			int floor = n%h;
+			if (floor==0) {
+				floor = h;
+			}
 			DecimalFormat df = new DecimalFormat("00");	
-			String ho = df.format(mok+1);
-			System.out.println(cha+ho);
+			result[i] = floor+df.format(ho);
+		}
+		for (int i = 0; i < result.length; i++) {
+			System.out.println(result[i]);
 		}
 	}
 }
