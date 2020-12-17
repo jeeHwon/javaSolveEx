@@ -8,10 +8,10 @@ public class ex2581 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int m = sc.nextInt();
-		int n = sc.nextInt();
+		int m = sc.nextInt();	
+		int n = sc.nextInt();	
 		List<Integer> list = new ArrayList<Integer>(); 
-		for (int i=m; i <= n; i++ ) {
+		for (int i=m; i <= n; i++ ) {	//m과 n 사이 소수 구해 list 추가
 			if (i==2) {
 				list.add(i);
 				continue;
