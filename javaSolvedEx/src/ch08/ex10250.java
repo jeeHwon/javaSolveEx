@@ -9,6 +9,9 @@ import java.util.StringTokenizer;
 public class ex10250 {
 
 	public static void main(String[] args) throws IOException {
+		//2
+		//6 12 10
+		//30 50 72
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int test = Integer.parseInt(bf.readLine());
 		String[] result = new String[test];
